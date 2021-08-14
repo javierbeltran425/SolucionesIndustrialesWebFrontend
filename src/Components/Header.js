@@ -1,13 +1,15 @@
+import Logo from '../Resources/Images/logo.png'
+
 const Header = () => {
     return(
         <>
-            <nav className="w-full h-auto bg-blue-500 z-10 text-white">
+            <nav className="absolute w-full h-auto bg-transparent z-10 text-white">
                 <div className="flex flex-row justify-between w-full">
-                    <h1 className="px-2">S & M</h1>
-                    <ul className="flex flex-row">
-                        <li className="px-2 py-2 hover:bg-white hover:text-black text-xl font-bold cursor-pointer">Inicio</li>
-                        <li className="px-2 py-2 hover:bg-white hover:text-black text-xl font-bold cursor-pointer">Quienes somos</li>
-                        <li className="px-2 py-2 hover:bg-white hover:text-black text-xl font-bold cursor-pointer">Contacto</li>
+                    <img src={Logo} className="w-12 h-12 ml-5 mt-2" alt="logo"/>
+                    <ul className="flex flex-row items-center">
+                        <li className="px-4 py-4 hover:bg-white duration-500 hover:text-black text-xl font-bold cursor-pointer">Inicio</li>
+                        <li className="px-4 py-4 hover:bg-white duration-500 hover:text-black text-xl font-bold cursor-pointer">Quienes somos</li>
+                        <li className="px-4 py-4 hover:bg-white duration-500 hover:text-black text-xl font-bold cursor-pointer">Contacto</li>
                     </ul>
                 </div>
             </nav>
