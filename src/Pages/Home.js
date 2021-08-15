@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faCogs } from '@fortawesome/free-solid-svg-icons'
 
 /**
  * Components
@@ -47,24 +49,12 @@ const CaButton = styled.div`
 `
 
 const Home = () => {
-    const [ CategButton, setCategButton ] = useState({ show: false })
+    const history = useHistory()
 
-    function catButton(e) {
-        e.preventDefault()
-        
-        if(CategButton.show)
-            setCategButton({ show: false })
-        else
-            setCategButton({ show: true })
+    function SetCategory(category){
+        localStorage.setItem('category', category)
+        history.push('/products')
     }
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
 
     return(
         <>
@@ -83,44 +73,44 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="absolute right-0 flex flex-col items-center w-1/4 h-5/6  overflow-y-auto">
-                        <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                        <div onClick={()=> SetCategory('Herramientas')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
                             <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">HERRAMIENTAS</h3>
+                            <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
+                        </div>
+
+                        <div onClick={()=> SetCategory('Máquinas estacionarias')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <Icon icon={faCogs} className="text-3xl text-white"/>
+                            <h3 className="text-white text-md font-bold pl-3">MÁQUINAS ESTACIONARIAS</h3>
+                        </div>
+
+                        <div onClick={()=> SetCategory('Máquinas portátiles')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <Icon icon={faCogs} className="text-3xl text-white"/>
+                            <h3 className="text-white text-md font-bold pl-3">MÁQUINAS PORTÁTILES</h3>
                         </div>
 
                         <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
                             <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">MÁQUINAS ESTACIONARIAS</h3>
+                            <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
                         </div>
 
                         <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
                             <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">MÁQUINAS PORTÁTILES</h3>
+                            <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
                         </div>
 
                         <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
                             <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">HERRAMIENTAS</h3>
+                            <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
                         </div>
 
                         <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
                             <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">HERRAMIENTAS</h3>
+                            <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
                         </div>
 
                         <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
                             <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">HERRAMIENTAS</h3>
-                        </div>
-
-                        <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">HERRAMIENTAS</h3>
-                        </div>
-
-                        <div className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <Icon icon={faWrench} className="text-3xl text-white"/>
-                            <h3 className="text-white text-xl font-bold pl-3">HERRAMIENTAS</h3>
+                            <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
                         </div>
                     </div>
                 </div>
@@ -130,12 +120,6 @@ const Home = () => {
                     <Carousel >
                         <div>
                             <img src={img01} />
-                        </div>
-                        <div>
-                            <img src={img02} />
-                        </div>
-                        <div>
-                            <img src={img03} />
                         </div>
                         <div>
                             <img src={img04} />
@@ -160,9 +144,6 @@ const Home = () => {
                         </div>
                         <div>
                             <img src={img11} />
-                        </div>
-                        <div>
-                            <img src={img12} />
                         </div>
                     </Carousel>
                 </div>
