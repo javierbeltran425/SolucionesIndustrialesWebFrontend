@@ -32,11 +32,6 @@ import img04 from '../Resources/Presentacion/04.png'
 import img05 from '../Resources/Presentacion/05.png'
 import img06 from '../Resources/Presentacion/06.png'
 import img07 from '../Resources/Presentacion/07.png'
-import img08 from '../Resources/Presentacion/08.png'
-import img09 from '../Resources/Presentacion/09.png'
-import img10 from '../Resources/Presentacion/10.png'
-import img11 from '../Resources/Presentacion/11.png'
-import img12 from '../Resources/Presentacion/12.png'
 
 const BackDiv = styled.div`
     background: url(${Background});
@@ -66,7 +61,8 @@ const Home = () => {
                             <img src={Logo} />
                             <img src={LogoText} className="h-32"/>
                         </div>
-                        <div className="flex flex-row w-full pb-3 pt-4 pl-4">
+                        <div className="flex flex-row w-full pb-3 pt-16 pl-4">
+                            <BrandCard />
                             <BrandCard />
                             <BrandCard />
                             <BrandCard />
@@ -122,6 +118,12 @@ const Home = () => {
                             <img src={img01} />
                         </div>
                         <div>
+                            <img src={img02} />
+                        </div>
+                        <div>
+                            <img src={img03} />
+                        </div>
+                        <div>
                             <img src={img04} />
                         </div>
                         <div>
@@ -132,18 +134,6 @@ const Home = () => {
                         </div>
                         <div>
                             <img src={img07} />
-                        </div>
-                        <div>
-                            <img src={img08} />
-                        </div>
-                        <div>
-                            <img src={img09} />
-                        </div>
-                        <div>
-                            <img src={img10} />
-                        </div>
-                        <div>
-                            <img src={img11} />
                         </div>
                     </Carousel>
                 </div>
