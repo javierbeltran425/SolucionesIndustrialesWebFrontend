@@ -11,7 +11,7 @@ import { faCogs } from '@fortawesome/free-solid-svg-icons'
 /**
  * Components
  */
-import Background from '../Resources/Images/robot.png'
+import Background from '../Resources/Images/background.jpg'
 import Header from '../Components/Header'
 import BrandCard from '../Components/BrandCard'
 import Footer from '../Components/Footer'
@@ -35,7 +35,7 @@ import img07 from '../Resources/Presentacion/07.png'
 
 const BackDiv = styled.div`
     background: url(${Background});
-    background: cover
+    background-size: cover
 `
 
 const CaButton = styled.div`
