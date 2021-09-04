@@ -53,15 +53,17 @@ const Home = () => {
 
     return(
         <>
-        <Header />
             <BackDiv className="w-full h-screen">
+            <Header />
+            <div className="absolute w-full h-screen bg-black opacity-80" />
+                <div className="z-10" >
                 <div className="flex flex-row w-full h-screen pt-16">
-                    <div className="flex flex-col w-full items-center">
-                        <div className="flex flex-row w-full mt-16 pl-20 items-center">
+                    <div className="flex flex-col w-3/4 items-center z-10">
+                        <div className="flex flex-row w-full mt-16 pl-4 items-center">
                             <img src={Logo} />
-                            <img src={LogoText} className="h-32"/>
+                            <img src={LogoText} className="h-32 w-3/5"/>
                         </div>
-                        <div className="flex flex-row w-full pb-3 pt-16 pl-4">
+                        <div className="flex flex-row w-full pb-3 pt-16 overflow-x-auto">
                             <BrandCard />
                             <BrandCard />
                             <BrandCard />
@@ -109,6 +111,7 @@ const Home = () => {
                             <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
                         </div>
                     </div>
+                </div>
                 </div>
                 </BackDiv>
 

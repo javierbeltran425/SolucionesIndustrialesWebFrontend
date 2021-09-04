@@ -10,7 +10,7 @@ const AboutUs = () => {
     return(
         <>
             <Header />
-            <div className="w-full min-h-screen bg-gray-400">
+            <div className="flex items-center w-full min-h-screen bg-gray-800">
                 <Carousel className="pt-16">
                         <div>
                             <img src={About01} />
