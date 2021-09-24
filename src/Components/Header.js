@@ -17,15 +17,15 @@ const Header = () => {
                         <li onClick={e => {
                             e.preventDefault()
                             history.push('/')
-                        }} className="text-xl px-2 py-2 md:px-4 md:py-4 hover:bg-white duration-500 hover:text-blue-700 md:text-xl font-bold cursor-pointer">Inicio</li>
+                        }} className="text-xl px-2 py-2 md:px-4 md:py-4 hover:bg-white duration-500 hover:text-blue-700 lg:text-xl font-bold cursor-pointer">Inicio</li>
                         <li onClick={e => {
                             e.preventDefault()
                             history.push('/about')
-                        }} className="text-xl px-2 py-2 md:px-4 md:py-4 hover:bg-white duration-500 hover:text-blue-700 md:text-xl font-bold cursor-pointer">Quienes somos</li>
+                        }} className="text-xl px-2 py-2 md:px-4 md:py-4 hover:bg-white duration-500 hover:text-blue-700 lg:text-xl font-bold cursor-pointer">Quienes somos</li>
                         <li onClick={e => {
                             e.preventDefault()
                             history.push('/contact')
-                        }} className="text-xl px-2 py-2 md:px-4 md:py-4 hover:bg-white duration-500 hover:text-blue-700 md:text-xl font-bold cursor-pointer">Contacto</li>
+                        }} className="text-xl px-2 py-2 md:px-4 md:py-4 hover:bg-white duration-500 hover:text-blue-700 lg:text-xl font-bold cursor-pointer">Contacto</li>
                     </ul>
                 </div>
             </nav>
