@@ -7,6 +7,7 @@ import Products from './Pages/Products'
 import AdminUpload from './Pages/AdminUpload'
 import AdminDelete from './Pages/AdminDelete'
 import AboutUs from './Pages/AboutUs'
+import Contact from './Pages/Contact'
 
 const queryClient = new QueryClient()
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/admin-upload' component={AdminUpload}/>
           <Route exact path='/admin-delete' component={AdminDelete}/>
           <Route exact path='/about' component={AboutUs}/>
+          <Route exact path='/contact' component={Contact}/>
         </Switch>
       </Router>
     </QueryClientProvider>
