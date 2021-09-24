@@ -117,8 +117,8 @@ const Home = () => {
                 </div>
                 </BackDiv>
 
-                <div className="flex items-center w-full min-h-screen bg-gray-800">
-                    <Carousel>
+                <div className="flex items-center w-full bg-gray-800">
+                    <Carousel className="w-full">
                         <div>
                             <img src={img01} />
                         </div>
