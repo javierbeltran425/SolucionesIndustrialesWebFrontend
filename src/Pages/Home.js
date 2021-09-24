@@ -32,6 +32,8 @@ import img04 from '../Resources/Presentacion/04.png'
 import img05 from '../Resources/Presentacion/05.png'
 import img06 from '../Resources/Presentacion/06.png'
 import img07 from '../Resources/Presentacion/07.png'
+import img08 from '../Resources/Presentacion/08.png'
+import img09 from '../Resources/Presentacion/09.png'
 
 const BackDiv = styled.div`
     background: url(${Background});
@@ -58,19 +60,19 @@ const Home = () => {
             <div className="absolute w-full h-screen bg-black opacity-80" />
                 <div className="z-10" >
                 <div className="flex flex-row w-full h-screen pt-16">
-                    <div className="flex flex-col w-3/4 items-center z-10">
-                        <div className="flex flex-row w-full mt-16 pl-4 items-center">
-                            <img src={Logo} />
-                            <img src={LogoText} className="h-32 w-3/5"/>
+                    <div className="flex flex-col md:w-3/4 items-center z-10">
+                        <div className="flex flex-col md:flex-row w-full mt-16 pl-4 items-center">
+                            <img src={Logo} className="w-52 h-52"/>
+                            <img src={LogoText} className="w-3/4 h-20 md:h-32 md:w-3/5"/>
                         </div>
-                        <div className="flex flex-row w-full pb-3 pt-16 overflow-x-auto">
+                        <div className="md:flex md:flex-row w-full pb-3 pt-16 overflow-x-auto">
                             <BrandCard />
                             <BrandCard />
                             <BrandCard />
                             <BrandCard />
                         </div>
                     </div>
-                    <div className="absolute right-0 flex flex-col items-center w-1/4 h-5/6  overflow-y-auto">
+                    <div className="hidden absolute right-0 md:flex md:flex-col items-center w-1/4 h-5/6  overflow-y-auto">
                         <div onClick={()=> SetCategory('Herramientas')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 cursor-pointer px-2 transform hover:scale-105 duration-500">
                             <Icon icon={faWrench} className="text-3xl text-white"/>
                             <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
@@ -115,8 +117,8 @@ const Home = () => {
                 </div>
                 </BackDiv>
 
-                <div className="flex flex-row w-full h-full bg-gray-300">
-                    <Carousel >
+                <div className="flex items-center w-full min-h-screen bg-gray-800">
+                    <Carousel>
                         <div>
                             <img src={img01} />
                         </div>
@@ -137,6 +139,12 @@ const Home = () => {
                         </div>
                         <div>
                             <img src={img07} />
+                        </div>
+                        <div>
+                            <img src={img08} />
+                        </div>
+                        <div>
+                            <img src={img09} />
                         </div>
                     </Carousel>
                 </div>

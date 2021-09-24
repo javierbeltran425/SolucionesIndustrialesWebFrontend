@@ -8,7 +8,7 @@ import Logo from '../Resources/Images/logo.png'
 const Footer = () => {
     return(
         <>
-            <div className="grid grid-cols-3 w-full h-40 bg-gray-900">
+            <div className="md:grid md:grid-cols-3 w-full md:h-40 bg-gray-900">
                 <div className="flex flex-row justify-center items-center">
                     <h3 className="text-white text-xl font-bold">S&M Industriales</h3>
                 </div>
