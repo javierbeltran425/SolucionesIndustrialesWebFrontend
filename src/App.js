@@ -9,6 +9,10 @@ import AdminDelete from './Pages/AdminDelete'
 import AboutUs from './Pages/AboutUs'
 import Contact from './Pages/Contact'
 
+import 'primereact/resources/themes/saga-blue/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
+
 const queryClient = new QueryClient()
 
 function App() {
