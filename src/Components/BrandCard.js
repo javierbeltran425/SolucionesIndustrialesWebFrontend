@@ -1,14 +1,40 @@
+import React, { useState } from 'react';
+import { Dialog } from 'primereact/dialog';
+import { Button } from 'primereact/button';
+import './DialogDemo.css';
+
 const BrandCard = ({ img, title, text }) => {
+    const [displayResponsive, setDisplayResponsive] = useState(false);
+
+    const dialogFuncMap = {
+        'displayResponsive': setDisplayResponsive
+    }
+
+    const onClick = (name) => {
+        dialogFuncMap[`${name}`](true);
+    }
+
+    const onHide = (name) => {
+        dialogFuncMap[`${name}`](false);
+    }
+
+    const renderFooter = (name) => {
+        return (
+            <div>
+                <Button label="Ok" icon="pi pi-check" onClick={() => onHide(name)} autoFocus />
+            </div>
+        );
+    }
+
     return(
         <>
-            <div className="flex flex-col items-center md:w-40 h-44 bg-white rounded-md mx-2 my-2 md:my-0 overflow-y-auto">
-                <img src={img} className="p-1"/>
-                <h1 className="text-sm py-3 px-2 font-extrabold">
-                    {title}
-                </h1>
-                <p className="text-sm px-2 font-semibold">
-                    {text}
-                </p>
+            <div className="dialog-demo mx-4 my-1 cursor-pointer">
+                <div className="card">
+                    <img src={img} onClick={() => onClick('displayResponsive')} className="md:w-28"/>
+                    <Dialog header={title} visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{'960px': '75vw'}} style={{width: '50vw'}} footer={renderFooter('displayResponsive')}>
+                        <p>{text}</p>
+                    </Dialog>
+                </div>
             </div>
         </>
     )

@@ -75,40 +75,13 @@ const Home = () => {
                             <img src={Logo} className="w-52 h-52"/>
                             <img src={LogoText} className="w-3/4 h-20 md:h-32 md:w-3/5"/>
                         </div>
-                        <div className="md:flex md:flex-row w-full pb-3 overflow-x-auto">
-                            <BrandCard 
-                                img={fafnir} 
-                                title="SOLUCIONES SEGURAS PARA UN FUTURO QUE VALGA LA PENA VIVIR"
-                                text="FAFNIR somos especialistas en el desarrollo y fabricación de sensores y sistemas para monitorizar y medir niveles de llenado.
-                                Proporcionamos la última tecnología en sistemas y soluciones de gestión de combustibles que permiten a nuestros clientes de las industrias petrolera, química y farmacéutica confiar plenamente en nuestros productos.
-                                
-                                Con nuestros sistemas medioambientales, todos trabajamos para garantizar que todos tengamos un futuro que valga la pena vivir."
-                                />
-                            <BrandCard 
-                                img={ebchq}
-                                title=""
-                                text=""
-                            />
-                            <BrandCard 
-                                img={anderson}
-                                title="ANDERSON-NEGELE SENSORES DE PROCESOS HIGIÉNICOS PARA APLICACIONES ALIMENTARIAS Y FARMACÉUTICAS"
-                                text="ANDERSON-NEGELE desarrolla y produce sensores en línea para aplicaciones higiénicas: temperatura, presión, nivel, nivel límite, turbidez, conductividad y refractómetro. Estos apoyan la supervisión y optimización de los procesos de producción y CIP/SIP en la industria alimentaria y farmacéutica, por ejemplo, en las lecherías, cervecerías, la producción de bebidas, vino, zumos, refrescos, agua mineral y otros alimentos"
-                            />
-                            <BrandCard 
-                                img={limerpak}
-                                title="La marca  Inkjet Dater  más innovadora de Brasil. Así es como  Limerpak  es reconocido hoy incluso por sus competidores."
-                                text="Fabricante de TIJ Inkjet Daters fundado en 2001, Limerpak se compromete a proporcionar al mercado nacional equipos innovadores para empresas de todos los tamaños."
-                            />
-                            <BrandCard 
-                                img={makita}
-                                title=""
-                                text=""
-                            />
-                            <BrandCard 
-                                img={truper}
-                                title="Herramientas con la mejor relación calidad-precio."
-                                text="Somos la empresa más reconocida en Latinoamérica en manufactura, distribución y comercialización de herramientas y productos para todos los segmentos de la industria ferretera."
-                            />
+                        <div className="md:flex md:flex-row w-full h-full md:justify-center items-center pt-20 overflow-x-auto items-end">
+                            <BrandCard img={fafnir} title={"Prueba de emergente"} text="Esto es una prueba de ventana emergente" />
+                            <BrandCard img={ebchq} title={"Prueba de emergente"} text="Esto es una prueba de ventana emergente" />
+                            <BrandCard img={anderson} title={"Prueba de emergente"} text="Esto es una prueba de ventana emergente" />
+                            <BrandCard img={limerpak} title={"Prueba de emergente"} text="Esto es una prueba de ventana emergente" />
+                            <BrandCard img={makita} title={"Prueba de emergente"} text="Esto es una prueba de ventana emergente" />
+                            <BrandCard img={truper} title={"Prueba de emergente"} text="Esto es una prueba de ventana emergente" />
                         </div>
                     </div>
                     <div className="md:absolute md:right-0 flex flex-row md:flex-col items-center md:w-1/4 h-5/6  overflow-y-auto">
