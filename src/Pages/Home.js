@@ -75,7 +75,7 @@ const Home = () => {
                             <img src={Logo} className="w-52 h-52"/>
                             <img src={LogoText} className="w-3/4 h-20 md:h-32 md:w-3/5"/>
                         </div>
-                        <div className="md:flex md:flex-row w-full pb-3 pt-16 overflow-x-auto">
+                        <div className="md:flex md:flex-row w-full pb-3 overflow-x-auto">
                             <BrandCard 
                                 img={fafnir} 
                                 title="SOLUCIONES SEGURAS PARA UN FUTURO QUE VALGA LA PENA VIVIR"
