@@ -28,13 +28,20 @@ const AdminUpload = () => {
 
     const CategOptions = [
         { value: "Herramientas", label: "Herramientas"},
-        { value: "Máquinas estacionarias", label: "Máquinas estacionarias"},
-        { value: "Máquinas portátiles", label: "Máquinas portátiles"}
+        { value: "Automatización", label: "Automatización"},
+        { value: "Instrumentación", label: "Instrumentación"},
+        { value: "Control y armado", label: "Control y armado"},
+        { value: "Residencial", label: "Residencial"},
+        { value: "Bono clientes", label: "Bono clientes"},
     ]
 
     const MakerOptions = [
-        { value: "Truper", label: "Truper"},
+        { value: "Fafnir", label: "Fafnir"},
+        { value: "Ebchq", label: "Ebchq"},
+        { value: "Anderson", label: "Anderson"},
+        { value: "Limerpak", label: "Limerpak"},
         { value: "Makita", label: "Makita"},
+        { value: "Truper", label: "Truper"},
     ]
 
     const { isLoading, mutate }  = useMutation(register => {
