@@ -18,10 +18,13 @@ const Footer = () => {
                         JARDINES DE GUADALUPE, CALLE LAS ROSAS #22 ANTIGUO CUSCATLAN LA LIBERTAD (EL SALVADOR)
                     </p>
                 </div>
-                <div className="flex flex-row justify-center items-center">
-                    <Icon icon={faFacebookF} className="text-white m-5 text-2xl hover:text-red-800 duration-500"/>
-                    <Icon icon={faInstagram} className="text-white m-5 text-2xl hover:text-red-800 duration-500"/>
-                    <Icon icon={faLinkedin} className="text-white m-5 text-2xl hover:text-red-800 duration-500"/>
+                <div className="flex flex-col justify-center items-center">
+                    <div className="flex flex-row justify-center items-center">
+                        <Icon icon={faFacebookF} className="text-white m-5 text-2xl hover:text-red-800 duration-500"/>
+                        <Icon icon={faInstagram} className="text-white m-5 text-2xl hover:text-red-800 duration-500"/>
+                        <Icon icon={faLinkedin} className="text-white m-5 text-2xl hover:text-red-800 duration-500"/>
+                    </div>
+                    <a href="https://javier-beltran.netlify.app/" className="text-xs text-white hover:text-red-800 duration-500">Desarrollado por Javier Beltrán</a>
                 </div>
             </div>
         </>
