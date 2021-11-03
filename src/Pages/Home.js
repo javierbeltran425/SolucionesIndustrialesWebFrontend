@@ -1,12 +1,7 @@
-import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-
-import { faWrench } from '@fortawesome/free-solid-svg-icons'
-import { faCogs } from '@fortawesome/free-solid-svg-icons'
 
 /**
  * Components
@@ -67,15 +62,15 @@ const Home = () => {
         <>
             <BackDiv className="w-full h-screen">
             <Header />
-            <div className="absolute w-full h-screen bg-black opacity-80" />
+            <div className="absolute w-full h-screen bg-black opacity-80 pb-10" />
                 <div className="z-10" >
                 <div className="flex flex-col md:flex-row w-full h-screen pt-16 overflow-y-auto">
-                    <div className="flex flex-col h-5/6 md:w-3/4 items-center z-10">
+                    <div className="flex flex-col h-5/7 md:w-3/4 items-center z-10">
                         <div className="flex flex-col md:flex-row w-full mt-16 pl-4 items-center">
                             <img src={Logo} className="w-52 h-52"/>
                             <img src={LogoText} className="w-3/4 h-20 md:h-32 md:w-3/5"/>
                         </div>
-                        <div className="md:flex md:flex-row w-full h-full md:justify-center items-center pt-20 overflow-x-auto items-end">
+                        <div className="flex flex-wrap md:flex-nowrap md:flex-row w-full h-full justify-center items-center md:p-6 mt-8 md:mt-20 overflow-x-auto ">
                             <BrandCard img={fafnir} title={"SOLUCIONES SEGURAS PARA UN FUTURO DIGNO DE SER VIVIDO"} 
                                 text="En FAFNIR somos especialistas en el desarrollo y la fabricación de sensores y sistemas de control 
                                 y medición de los niveles de llenado.
@@ -145,29 +140,29 @@ const Home = () => {
                                 avanzado del mundo en el sector ferretero." />
                         </div>
                     </div>
-                    <div className="md:absolute md:right-0 flex flex-row md:flex-col items-center md:w-1/4 h-5/6  overflow-y-auto">
-                        <div onClick={()=> SetCategory('Herramientas')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <h3 className="text-white text-md font-bold pl-3">HERRAMIENTAS</h3>
+                    <div className="md:absolute md:right-0 flex flex-row md:flex-col items-center justify-center md:w-1/4 h-5/6 md:overflow-y-auto overflow-x-auto">
+                        <div onClick={()=> SetCategory('Herramientas')} className="flex justify-center items-center bg-blue-700 rounded-full w-48 h-10 ml-32 md:ml-0 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <h3 className="text-white text-xs md:text-sm font-bold pl-3">HERRAMIENTAS</h3>
                         </div>
 
-                        <div onClick={()=> SetCategory('Automatización')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <h3 className="text-white text-md font-bold pl-3">AUTOMATIZACIÓN</h3>
+                        <div onClick={()=> SetCategory('Automatización')} className="flex justify-center items-center bg-blue-700 rounded-full w-48 h-10 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <h3 className="text-white text-xs md:text-sm font-bold pl-3">AUTOMATIZACIÓN</h3>
                         </div>
 
-                        <div onClick={()=> SetCategory('Instrumentación')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <h3 className="text-white text-md font-bold pl-3">INSTRUMENTACIÓN</h3>
+                        <div onClick={()=> SetCategory('Instrumentación')} className="flex justify-center items-center bg-blue-700 rounded-full w-48 h-10 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <h3 className="text-white text-xs md:text-sm font-bold pl-3">INSTRUMENTACIÓN</h3>
                         </div>
 
-                        <div onClick={()=> SetCategory('Control y armado')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <h3 className="text-white text-md font-bold pl-3">CONTROL Y ARMADO</h3>
+                        <div onClick={()=> SetCategory('Control y armado')} className="flex justify-center items-center bg-blue-700 rounded-full w-48 h-10 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <h3 className="text-white text-xs md:text-sm font-bold pl-3">CONTROL Y ARMADO</h3>
                         </div>
 
-                        <div onClick={()=> SetCategory('Residencial')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <h3 className="text-white text-md font-bold pl-3">RESIDENCIAL</h3>
+                        <div onClick={()=> SetCategory('Residencial')} className="flex justify-center items-center bg-blue-700 rounded-full w-48 h-10 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <h3 className="text-white text-xs md:text-sm font-bold pl-3">RESIDENCIAL</h3>
                         </div>
 
-                        <div onClick={()=> SetCategory('Bono clientes')} className="flex justify-center items-center bg-blue-700 rounded-full w-56 h-20 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
-                            <h3 className="text-white text-md font-bold pl-3">BONO CLIENTES</h3>
+                        <div onClick={()=> SetCategory('Bono clientes')} className="flex justify-center items-center bg-blue-700 rounded-full w-48 h-10 mt-5 mx-2 md:mx-0 cursor-pointer px-2 transform hover:scale-105 duration-500">
+                            <h3 className="text-white text-xs md:text-sm font-bold pl-3">BONO CLIENTES</h3>
                         </div>
                     </div>
                 </div>

@@ -30,7 +30,7 @@ const BrandCard = ({ img, title, text }) => {
         <>
             <div className="dialog-demo mx-4 my-1 cursor-pointer">
                 <div className="card">
-                    <img src={img} onClick={() => onClick('displayResponsive')} className="md:w-28"/>
+                    <img src={img} onClick={() => onClick('displayResponsive')} className="w-28"/>
                     <Dialog header={title} visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{'960px': '75vw'}} style={{width: '50vw'}} footer={renderFooter('displayResponsive')}>
                         <p>{text}</p>
                     </Dialog>
