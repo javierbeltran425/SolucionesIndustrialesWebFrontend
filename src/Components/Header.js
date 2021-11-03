@@ -11,7 +11,7 @@ const Header = () => {
                 <div className="flex flex-row md:justify-between w-full">
                     <img onClick={e => {
                         e.preventDefault()
-                        history.push('/')
+                        history.push('/login')
                     }} src={Logo} className="w-10 h-10 md:w-12 md:h-12 ml-5 mt-2 cursor-pointer" alt="logo"/>
                     <ul className="flex flex-row items-center">
                         <li onClick={e => {

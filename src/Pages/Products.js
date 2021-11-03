@@ -1,8 +1,7 @@
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-import { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useState } from 'react'
 import { useAxiosPost } from '../Hooks/useAxiosPost'
 
 import Header from '../Components/Header'
@@ -10,7 +9,6 @@ import ProductCard from '../Components/ProductCard'
 import Footer from '../Components/Footer'
 
 const Products = () => {
-    const history = useHistory()
     const [ search, setSearch ] = useState(null)
     const [page, setPage] = useState(1)
     const [ searchContent, setSearchContent ] = useState(null)
