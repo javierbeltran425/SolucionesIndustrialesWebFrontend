@@ -1,5 +1,6 @@
+import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './Pages/Home'
 import Login from './Pages/Login'
@@ -19,16 +20,17 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/login' component={Login}/>
-          <Route exact path='/products' component={Products}/>
-          <Route exact path='/admin-upload' component={AdminUpload}/>
-          <Route exact path='/admin-delete' component={AdminDelete}/>
-          <Route exact path='/about' component={AboutUs}/>
-          <Route exact path='/contact' component={Contact}/>
-        </Switch>
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/login' component={Login}/>
+            <Route exact path='/products' component={Products}/>
+            <Route exact path='/admin-upload' component={AdminUpload}/>
+            <Route exact path='/admin-delete' component={AdminDelete}/>
+            <Route exact path='/about' component={AboutUs}/>
+            <Route exact path='/contact' component={Contact}/>
+          </Switch>
       </Router>
+      <ReactQueryDevtools initialIsOpen={false}/>
     </QueryClientProvider>
   );
 }
